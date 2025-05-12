@@ -3,11 +3,10 @@
 ##
 ## More details on https://github.com/actions/first-interaction
 
-name: Create a Label on PR
-
-on: [pull_request]
-
-
+name: Add a Label on PR
+on:
+  pull_request:
+    types: [opened]
 jobs:
   greeting:
     runs-on: ubuntu-latest
