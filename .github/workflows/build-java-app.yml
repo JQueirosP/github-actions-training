@@ -2,11 +2,11 @@ name: Build Java App
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "build-java-app" ]
     paths:
       - java-app/**
   pull_request:
-    branches: [ "main" ]
+    branches: [ "build-java-app" ]
 
 jobs:
   build:
