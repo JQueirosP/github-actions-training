@@ -1,0 +1,20 @@
+## This workflow runs on all pull requests and issues.
+## It greets new contributors when they create their first issue or open their first pull request.
+##
+## More details on https://github.com/actions/first-interaction
+
+name: Greetings
+
+on: [pull_request]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Add label to PR
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} --add-label "needs-review"
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
