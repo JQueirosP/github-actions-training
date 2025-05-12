@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       packages: write
+#      contents: read # [if for example the repo under checkout is private and we need to give permissions to the action to read the repo]
     defaults:
       run:
         # Set the working directory to the java-app directory
